@@ -39,15 +39,24 @@ public class Practice11StrokeMiterView extends View {
         canvas.save();
 
         canvas.translate(100, 100);
+
+        /**
+         * 这个方法是对于 setStrokeJoin() 的一个补充，它用于设置 MITER 型拐角的延长线的最大值。
+         * http://hencoder.com/ui-1-2/
+         */
+
         // MITER 值：1
+        paint.setStrokeMiter(1);
         canvas.drawPath(path, paint);
 
         canvas.translate(300, 0);
         // MITER 值：2
+        paint.setStrokeMiter(2);
         canvas.drawPath(path, paint);
 
         canvas.translate(300, 0);
         // MITER 值：5
+        paint.setStrokeMiter(5);
         canvas.drawPath(path, paint);
 
         canvas.restore();
