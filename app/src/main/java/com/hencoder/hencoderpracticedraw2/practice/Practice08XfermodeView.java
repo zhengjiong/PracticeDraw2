@@ -66,7 +66,7 @@ public class Practice08XfermodeView extends View {
         canvas.drawBitmap(bitmap2, 0, bitmap1.getHeight() + 20, paint);
         paint.setXfermode(null);
 
-        
+
         canvas.restoreToCount(count);
         // 用完之后使用 canvas.restore() 恢复 off-screen buffer
     }
