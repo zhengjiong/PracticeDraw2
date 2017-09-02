@@ -12,8 +12,16 @@ import android.view.View;
 
 public class Practice02RadialGradientView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    /**
+     * centerX centerY：辐射中心的坐标
+     * radius：辐射半径
+     * centerColor：辐射中心的颜色
+     * edgeColor：辐射边缘的颜色
+     * tileMode：辐射范围之外的着色模式。
+     */
     Shader shader = new RadialGradient(
-            300, 300, 200,
+            300, 300,
+            200,
             Color.parseColor("#E91E63"),
             Color.parseColor("#2196F3"),
             Shader.TileMode.CLAMP
