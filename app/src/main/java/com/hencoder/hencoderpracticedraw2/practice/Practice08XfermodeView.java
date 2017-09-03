@@ -45,7 +45,7 @@ public class Practice08XfermodeView extends View {
 
 
         // 第一个：PorterDuff.Mode.SRC
-        int count = canvas.saveLayer(0, 0, getMeasuredWidth(), getMeasuredHeight(), paint, Canvas.ALL_SAVE_FLAG);
+        int count = canvas.saveLayer(null, null, Canvas.ALL_SAVE_FLAG);
         canvas.drawBitmap(bitmap1, 0, 0, paint);
 
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
