@@ -30,7 +30,10 @@ public class Practice16TextPathView extends View {
         paint.setTextSize(120);
 
         // 使用 Paint.getTextPath() 来获取文字的 Path
-
+        /**
+         * getTextPath() 方法，获取的就是目标文字所对应的 Path 。这个就是所谓「文字的 Path」。
+         *
+         */
         pathPaint.setStyle(Paint.Style.STROKE);
     }
 
@@ -40,6 +43,11 @@ public class Practice16TextPathView extends View {
 
         canvas.drawText(text, 50, 200, paint);
 
+        /**
+         * 50代表path的开始x坐标
+         * 500代表path的开始y坐标
+         */
+        paint.getTextPath(text, 0, text.length(), 50, 500, textPath);
         canvas.drawPath(textPath, pathPaint);
     }
 }

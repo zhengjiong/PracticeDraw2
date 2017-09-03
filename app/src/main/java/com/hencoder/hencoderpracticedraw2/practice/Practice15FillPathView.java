@@ -44,6 +44,10 @@ public class Practice15FillPathView extends View {
         super.onDraw(canvas);
 
         // 使用 Paint.getFillPath() 获取实际绘制的 Path
+        /**
+         * 通过 getFillPath(src, dst) 方法就能获取这个实际 Path。方法的参数里，src 是原 Path ，
+         * 而 dst 就是实际 Path 的保存位置。 getFillPath(src, dst) 会计算出实际 Path，然后把结果保存在 dst 里。
+         */
 
         paint.setStyle(Paint.Style.FILL_AND_STROKE);//这里用fill和fill_and_stroke效果一样
         paint.setStrokeWidth(0);
